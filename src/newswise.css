@@ -1,0 +1,268 @@
+    html {
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      border-bottom: 100px solid #1c3475;
+      --rule-colour: #dcdcdc;
+      --v-pad-top: .5em;
+      --v-pad-bot: .5em;
+    }
+
+    body {
+      margin: 0 auto;
+      max-width: 1400px;
+    }
+
+    figure { 
+      margin: 0; 
+      padding: 0;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    p + p {
+      text-indent: 1.5em;
+    }
+
+    *:focus {
+      outline: none;
+      background: #ffe94863;
+    }
+
+    .toolbar {
+      background: white;
+      box-shadow: 0 0 10px rgba(0,0,0,.1);
+      position: fixed;
+      right: 20px;
+      top: 20px;
+      width: 64px;
+      padding: 0;
+      z-index: 2;
+    }
+
+    .toolbar menuitem {
+      border: 1px solid var(--rule-colour);
+      display: block;
+      padding: 5px 0;
+    }
+
+    .toolbar menuitem + menuitem {
+      border-top: none;
+    }
+
+    .toolbar img {
+      max-width: 100%;
+    }
+
+    .view {
+      display: grid;
+      grid-template-columns: repeat(5, 20%);
+      grid-template-areas:
+        "h1 h1 h2 h2 h2"
+        "h1 h1 m0 m0 m0"
+        "h3 h3 h3 h3 h3"
+        "h4 h5 h5 h5 h6"
+        "h4 h5 h5 h5 h7";
+    }
+
+    .m0 { grid-area: m0; }
+    .h1 { grid-area: h1; }
+    .h2 { grid-area: h2; }
+    .h3 { grid-area: h3; }
+    .h4 { grid-area: h4; }
+    .h5 { grid-area: h5; }
+    .h6 { grid-area: h6; }
+    .h7 { grid-area: h7; }
+
+    .h, .m {
+      padding: var(--v-pad-top) 10px var(--v-pad-bot);
+    }
+
+    .m0 {
+      background: #1c3475;
+      color: white;
+      position: relative;
+    }
+
+    .m0 path {
+      fill: white;
+    }
+
+    .m0 .furniture {
+      border-left: 1px solid white;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 33.33%;
+    }
+
+    .h1 {
+      background: #00abef;
+      color: white;
+      --v-pad-top: 0;
+    }
+
+    .h1 .kicker {
+      color: #0e3878;
+      font-size: 48px;
+      font-weight: bold;
+    }
+
+    .h1 .title {
+      font-size: 44px;
+    }
+
+    .h1 img {
+      float: right;
+      width: 200px;
+      clip-path: polygon(30% 21%, 59% 0%, 100% 0, 100% 100%, 79% 100%, 41% 93%, 29% 66%);
+      shape-outside: polygon(30% 21%, 59% 0%, 100% 0, 100% 100%, 79% 100%, 41% 93%, 29% 66%);
+      shape-margin: 5px;
+      margin-right: -10px;
+    }
+
+    .h2 {
+      background: #1c3475;
+      color: white;
+      border-bottom: 1px solid white;
+    }
+
+    .h2 .kicker {
+      color: #ffe500;
+    }
+
+    .h2 .kicker,
+    .h2 .title {
+      font-size: 36px;
+      display: inline;
+    }
+
+    .lines {
+      background-image: repeating-linear-gradient(to bottom, #dcdcdc, #dcdcdc 0.0625rem, transparent 0.0625rem, transparent 0.25rem);
+      background-repeat: repeat-x;
+      background-size: 1px 29px;
+    }
+
+    .h3 {
+      border-width: 0 0 1px;
+      border-style: solid;
+      border-color: var(--rule-colour); 
+      columns: 5;
+      column-gap: 20px;
+      column-width: 20%;
+      margin: 0 0 5px;
+
+      --v-pad-top: 30px;
+    }
+
+    .h3 .title {
+      column-span: all;
+      font-size: 64px;
+      margin-bottom: .5em;
+    }
+
+    .h4 {
+      border-right: 1px solid var(--rule-colour);
+    }
+    
+    .h4 .title {
+      font-size: 40px;
+      font-weight: bold;
+    }
+
+    .h5 {
+      align-items: stretch;
+      display: flex;
+      position: relative;
+      --v-pad-top: 0;
+      --v-pad-bot: 16px;
+    }
+
+    .h5 .head {
+      background: #1c3475;
+      color: #ffe500;
+      position: absolute;
+      bottom: var(--v-pad-bot);
+      right: 10px;
+      z-index: 1;
+      width: 33.33%;
+      font-size: 24px;
+    }
+
+    .h5 .kicker {
+      color: white;
+    }
+
+    .h5 figure {
+      align-items: stretch;
+      display: grid;
+      position: relative;
+    }
+
+    .h5 img {
+      max-width: 100%;
+      object-fit: cover;
+    }
+
+    .h5 figcaption {
+      position: absolute;
+      top: 100%;
+      font-style: italic;
+      font-size: 14px;
+    }
+
+    .h5 figcaption small {
+      font-size: inherit;
+      font-style: normal;
+      text-transform: lowercase;
+      font-variant: small-caps;
+      margin-left: 1ex;
+    }
+
+    .h6, .h4 {
+      --v-pad-top: 0;
+    }
+
+    .h6, .h7 {
+      border-left: 1px solid var(--rule-colour);
+      font-size: 24px;
+    }
+    
+    .h6 .title,
+    .h7 .title {
+      color: #0e3878;
+      font-size: 36px;
+      font-weight: bold;
+    }
+
+    .h7  {
+      --v-pad-top: 30px;
+    }
+
+    .byline {
+      list-style: none;
+      margin: 0 0 8px;
+      padding: 30px 0 8px;
+      border-bottom: 1px solid var(--rule-colour);
+
+    }
+    
+    .byline b {
+      color: #c70000;
+      display: block;
+    }
+
+@media print {
+  @page {
+    size: a3;
+  }
+
+  .toolbar { display: none; }
+
+  body {
+    max-width: none;
+  }
+}

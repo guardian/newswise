@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Newswise</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    html {
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      background: #fed5b7;
+      --rule-colour: #121212;
+    }
+
+    body {
+      margin: 0 auto;
+      max-width: 1400px;
+    }
+
+    figure { 
+      margin: 0; 
+      padding: 0;
+    }
+
+    .view {
+      display: grid;
+      grid-template-columns: repeat(11, 1fr);
+      grid-template-areas:
+        "m0 m0 m0 m0 m0 m0 m0 m0 m0 m0 m0"
+        "h1 h1 h1 h1 h1 h2 h2 h2 h2 h2 h2"
+        "h3 h3 h3 h3 h3 h3 h3 h3 .  h6 h6"
+        "h5 h5 h4 h4 h4 h4 h4 h4 .  h6 h6"
+        "h5 h5 h4 h4 h4 h4 h4 h4 .  h7 h7";
+    }
+
+    .m0 { grid-area: m0; }
+    .h1 { grid-area: h1; }
+    .h2 { grid-area: h2; }
+    .h3 { grid-area: h3; }
+    .h4 { grid-area: h4; }
+    .h5 { grid-area: h5; }
+    .h6 { grid-area: h6; }
+    .h7 { grid-area: h7; }
+
+    .pad {
+      padding: 0 10px;
+    }
+
+    .m0 {
+      position: relative;
+    }
+
+    .m0 path {
+      fill: white;
+    }
+
+    .m0 .furniture {
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .h1 .clip {
+      float: right;
+      width: 200px;
+      clip-path: polygon(30% 21%, 59% 0%, 100% 0, 100% 100%, 79% 100%, 41% 93%, 29% 66%);
+      shape-outside: polygon(30% 21%, 59% 0%, 100% 0, 100% 100%, 79% 100%, 41% 93%, 29% 66%);
+      shape-margin: 5px;
+      margin-right: -10px;
+    }
+
+    .h2 .kicker,
+    .h2 .title {
+      display: inline;
+    }
+
+    .h3 {
+      columns: 4;
+      column-gap: 20px;
+      margin: 0 0 5px;
+    }
+
+    .h3 .title {
+      column-span: all;
+    }
+
+    .h4 {
+      columns: 3;
+      column-gap: 20px;
+    }
+
+    .h4 .title {
+      column-span: all;
+      font-weight: bold;
+    }
+
+    .h5 img {
+      max-width: 100%;
+      object-fit: cover;
+    }
+
+    .h6, .h7 {
+      font-size: 24px;
+    }
+    
+    .h6 .title,
+    .h7 .title {
+      font-size: 36px;
+      font-weight: bold;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="view">
+    <div class="masthead m0 pad">
+      <img src=ft.png>
+      <div class="furniture pad">
+        <time>Tuesday<br>27 November 2018</time>
+        <span>Issue №53,577</span>
+        <span>£2,00</span>
+      </div>
+    </div>
+    <div class="headline h1 pad">
+      <img src="mammoth.jpg" class="clip">
+      <div class="kicker">Mammoth haul</div>
+      <div class="title">
+        Unearthing the treasures of the A14
+    </div>
+    </div>
+    <div class="headline h2 pad">
+      <div class="kicker">Personal finance</div>
+      <div class="title">20 questions you were too embarrassed to ask</div>
+    </div>
+    <div class="headline h3 pad">
+      <div class="title">Climate-warming El Niño very likely in 2019, says UN agency</div>
+      <div class="content">
+        <ul class="byline">
+          <li>
+            <b>Damian Carrington</b>
+            Environment editor
+          </li>
+        </ul>
+        <p>There is a 75-80% chance of a climate-warming El Niño event by February, according to the latest analysis from the UN’s World Meteorological Organization.</p>
+    
+        <p>The last El Niño event ended in 2016 and helped make that year the hottest ever recorded by adding to the heating caused by humanity’s carbon emissions. The 2019 event is not currently forecast to be as strong as in 2016.</p>
+    
+        <p>El Niño events occur naturally every few years and stem from abnormally high ocean temperatures in the western Pacific. They have a major influence on weather around the globe, bringing droughts to normally damp places, such as parts of Australia, and floods to normally drier regions, such as in South America. The high temperatures also cause major bleaching on coral reefs.</p>
+    
+        <p>“The forecast El Niño is not expected to be as powerful as the event in 2015-2016,” said Maxx Dilley, the director of WMO’s climate prediction and adaptation branch. “Even so, it can still significantly affect rainfall and temperature patterns in many regions, with important consequences to agriculture and food security, and for management of water resources and public health. It may also combine with long-term climate change to boost 2019 global temperatures.”</p>
+    
+        <p>Forecasters in the US have already warned of an imminent El Niño. Australia’s Bureau of Meteorology said in October that a dry, hot summer was very likely, with increased risk of heatwaves and bushfires and no relief for already drought-stricken farmers. There is evidence that climate change is making the effects of El Niño more severe.</p>
+    
+        <p>The heat boost from El Niño helped 2016 to be the hottest year ever recorded. The following year, 2017, was ranked equal second, but was the hottest for a year without an El Niño. Scientists expect 2018, which saw climate-related disasters around the globe, to be the fourth hottest on record.</p>
+      </div>
+    </div>
+    <div class="headline h4 pad">
+      <div class="title">Climate-warming El Niño very likely in 2019, says UN agency</div>
+      <div class="content">
+        <ul class="byline">
+          <li>
+            <b>Damian Carrington</b>
+            Environment editor
+          </li>
+        </ul>
+        <p>There is a 75-80% chance of a climate-warming El Niño event by February, according to the latest analysis from the UN’s World Meteorological Organization.</p>
+    
+        <p>The last El Niño event ended in 2016 and helped make that year the hottest ever recorded by adding to the heating caused by humanity’s carbon emissions. The 2019 event is not currently forecast to be as strong as in 2016.</p>
+    
+        <p>El Niño events occur naturally every few years and stem from abnormally high ocean temperatures in the western Pacific. They have a major influence on weather around the globe, bringing droughts to normally damp places, such as parts of Australia, and floods to normally drier regions, such as in South America. The high temperatures also cause major bleaching on coral reefs.</p>
+    
+        <p>“The forecast El Niño is not expected to be as powerful as the event in 2015-2016,” said Maxx Dilley, the director of WMO’s climate prediction and adaptation branch. “Even so, it can still significantly affect rainfall and temperature patterns in many regions, with important consequences to agriculture and food security, and for management of water resources and public health. It may also combine with long-term climate change to boost 2019 global temperatures.”</p>
+    
+        <p>Forecasters in the US have already warned of an imminent El Niño. Australia’s Bureau of Meteorology said in October that a dry, hot summer was very likely, with increased risk of heatwaves and bushfires and no relief for already drought-stricken farmers. There is evidence that climate change is making the effects of El Niño more severe.</p>
+    
+        <p>The heat boost from El Niño helped 2016 to be the hottest year ever recorded. The following year, 2017, was ranked equal second, but was the hottest for a year without an El Niño. Scientists expect 2018, which saw climate-related disasters around the globe, to be the fourth hottest on record.</p>
+      </div>      
+    </div>
+    <div class="headline h5 pad">
+      <div class="head">
+        <div class="kicker">Touchdown</div>
+        <div class="title">Climate-warming El Niño very likely in 2019, says UN agency</div>
+      </div>
+      <figure>
+        <img src="mars.jpg">
+        <figcaption>
+          Jubilation at Nasa mission control for scientists Kris Bruvold, left, and Sandy Krasner
+          <small>Photograph <b>Willian Justen de Vasconcellos</b></small>
+        </figcaption>
+      </figure>
+    </div>
+    <div class="headline h6 pad">
+      <div class="title">Climate-warming El Niño very likely in 2019, says UN agency</div>
+      <div class="content">
+        <p>There is a 75-80% chance of a climate-warming El Niño event by February, according to the latest analysis from the UN’s World Meteorological Organization.</p>
+      </div>
+    </div>
+    <div class="headline h7 pad">
+      <div class="title">Climate-warming El Niño very likely in 2019, says UN agency</div>
+      <div class="content">
+        <p>There is a 75-80% chance of a climate-warming El Niño event by February, according to the latest analysis from the UN’s World Meteorological Organization.</p>
+      </div>
+    </div>  
+  </div>
+</body>
+</html>
